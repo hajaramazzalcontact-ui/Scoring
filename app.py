@@ -37,14 +37,21 @@ st.set_page_config(page_title="Scoring des Impayés", page_icon="💰", layout="
 # ============================================================
 #  ÉTAT
 # ============================================================
+# Clé IA fournie via les « Secrets » Streamlit (utile en ligne) — facultatif.
+try:
+    _cle_secret = st.secrets.get("ANTHROPIC_API_KEY", "")
+    _modele_secret = st.secrets.get("ANTHROPIC_MODEL", "")
+except Exception:
+    _cle_secret, _modele_secret = "", ""
+
 DEFAULT_STATE = {
     "societe": "Ma Société",
     "seuil_1": 1, "seuil_2": 8, "seuil_3": 15, "seuil_4": 30, "seuil_5": 60,
     "poids_retard": 40, "poids_montant": 25, "poids_hist": 20, "poids_risque": 15,
     "ton": "bienveillant",
     "langue": "français",
-    "api_key": "",
-    "model": "claude-sonnet-4-5",
+    "api_key": _cle_secret,
+    "model": _modele_secret or "claude-sonnet-4-5",
     "factures": [],
     "historique": [],
     "messages": {},      # id -> texte généré

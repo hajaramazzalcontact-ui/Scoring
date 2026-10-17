@@ -62,6 +62,23 @@ Chaque score est **expliqué en une phrase** (aucune boîte noire).
 Pour activer : page **Réglages & historique** → *Clé API Anthropic* → collez votre clé
 (`sk-ant-...`). Le modèle par défaut est `claude-sonnet-4-5` (modifiable).
 
+## Déployer sur Streamlit Cloud
+
+1. Poussez le dépôt sur GitHub (fait : branche `main`).
+2. Sur [share.streamlit.io](https://share.streamlit.io) → **New app** → choisissez le dépôt
+   `hajaramazzalcontact-ui/mon_app`, branche `main`, fichier principal **`app.py`**.
+3. (Optionnel) **Clé IA en ligne** : *Settings → Secrets* et collez :
+
+   ```toml
+   ANTHROPIC_API_KEY = "sk-ant-..."
+   ANTHROPIC_MODEL = "claude-sonnet-4-5"
+   ```
+
+   L'application lit ces secrets au démarrage ; sinon, laissez vide et saisissez la clé
+   dans la page *Réglages & historique*.
+4. Les données sont **en session** : chaque visiteur démarre avec un portefeuille vide
+   (bouton *Charger la démo* disponible). Rien n'est écrit sur le disque.
+
 ## Points juridiques et données
 
 - Les modèles de **mise en demeure** et de **note à l'avocat** sont des **brouillons** :
