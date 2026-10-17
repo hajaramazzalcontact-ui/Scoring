@@ -1,0 +1,16 @@
+# Environnement Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Données locales (factures, journal, historique d'apprentissage)
+data/
+*.db
+
+# Exports générés
+exports/
+*.xlsx
+
+# Divers
+.DS_Store
+Thumbs.db

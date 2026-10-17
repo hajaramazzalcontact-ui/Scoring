@@ -1,0 +1,27 @@
+# Configuration de l'application Streamlit — Scoring des Impayés
+# Ces valeurs remplacent celles du menu « Settings ». Elles ne sont pas écrasées
+# par l'utilisateur, sauf s'il modifie les paramètres depuis l'interface.
+
+[theme]
+# Le mode clair ou sombre suit les réglages du navigateur (« Apparence : système »).
+base = "light"
+primaryColor = "#1d4ed8"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f5f7fb"
+textColor = "#0f172a"
+font = "sans serif"
+
+[server]
+headless = true
+maxUploadSize = 50
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# Les avertissements de dépréciation resteraient sinon affichés dans l'application.
+showErrorDetails = "full"
+toolbarMode = "minimal"
+
+[logger]
+level = "warning"
