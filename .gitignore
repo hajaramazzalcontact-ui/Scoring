@@ -1,15 +1,30 @@
 # Environnement Python
 .venv/
+venv/
+env/
 __pycache__/
 *.py[cod]
+*.egg-info/
+.pytest_cache/
 
 # Données locales (factures, journal, historique d'apprentissage)
 data/
 *.db
+*.sqlite3
 
 # Exports générés
 exports/
 *.xlsx
+
+# Secrets (clé API, mots de passe) — NE JAMAIS committer
+.streamlit/secrets.toml
+.env
+.env.*
+*.env
+
+# Éditeurs
+.idea/
+.vscode/
 
 # Divers
 .DS_Store
