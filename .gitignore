@@ -29,3 +29,7 @@ exports/
 # Divers
 .DS_Store
 Thumbs.db
+
+# Journaux de test / serveur
+tests/*.log
+tests/*.txt

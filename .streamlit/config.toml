@@ -1,15 +1,31 @@
 # Configuration de l'application Streamlit — Scoring des Impayés
-# Ces valeurs remplacent celles du menu « Settings ». Elles ne sont pas écrasées
-# par l'utilisateur, sauf s'il modifie les paramètres depuis l'interface.
+# Palette 7.1 : bleu nuit (marque), turquoise (paiements), violet (IA),
+# échelle d'urgence du vert au noir.
+#
+# Deux thèmes complets sont définis : clair et sombre. L'utilisateur bascule
+# entre les deux (ou suit le système) via le menu ⋮ → Settings → Theme.
+# L'application détecte le thème actif (st.context.theme) et adapte ses cartes,
+# badges et graphiques en conséquence.
 
 [theme]
-# Le mode clair ou sombre suit les réglages du navigateur (« Apparence : système »).
 base = "light"
-primaryColor = "#1d4ed8"
-backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#f5f7fb"
-textColor = "#0f172a"
+primaryColor = "#0FB5AE"
 font = "sans serif"
+baseRadius = "large"
+metricValueFontSize = "1.9rem"
+metricValueFontWeight = 800
+
+[theme.light]
+backgroundColor = "#F7F9FC"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#0F172A"
+borderColor = "#E2E8F0"
+
+[theme.dark]
+backgroundColor = "#0B1220"
+secondaryBackgroundColor = "#111C2E"
+textColor = "#E5E7EB"
+borderColor = "#1E293B"
 
 [server]
 headless = true
@@ -19,9 +35,10 @@ maxUploadSize = 50
 gatherUsageStats = false
 
 [client]
-# Les avertissements de dépréciation resteraient sinon affichés dans l'application.
+# "auto" laisse le menu ⋮ disponible : c'est lui qui permet de basculer
+# entre le thème clair et le thème sombre.
 showErrorDetails = "full"
-toolbarMode = "minimal"
+toolbarMode = "auto"
 
 [logger]
 level = "warning"
