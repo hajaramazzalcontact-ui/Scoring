@@ -2,7 +2,7 @@
 # Installation :  pip install -r requirements.txt
 # Lancement    :  streamlit run app.py
 
-streamlit>=1.37
+streamlit>=1.66
 pandas>=2.0
 numpy>=1.24
 plotly>=5.18
